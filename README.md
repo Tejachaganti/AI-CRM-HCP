@@ -212,54 +212,28 @@ Show pending follow-ups
 # 📸 Screenshots
 
 ## Dashboard
-
-![Dashboard](dashboardai.png)
-
----
-
----
+![Dashboard](screenshots/dashboard.png)
 
 ## AI Log Interaction
-
-![AI Log](logtool.png)
-
----
+![AI Log](screenshots/ai-log.png)
 
 ## Find Doctor
-
-![Search](searchtool.png)
-
----
+![Find Doctor](screenshots/find-doctor.png)
 
 ## AI Summary
-
-![Summary](summarytool.png)
-
----
+![Summary](screenshots/summary.png)
 
 ## Product Insights
-
-![Product](productinsightstool.png)
-
----
+![Product Insights](screenshots/product-insights.png)
 
 ## Pending Follow-ups
-
-![Follow-up](followuptool.png)
-
----
+![Follow-ups](screenshots/followups.png)
 
 ## Swagger API
-
-![Swagger](swagger.png)
-
----
+![Swagger](screenshots/swagger.png)
 
 ## MySQL Database
-
-![MySQL](mysql.png)
-
----
+![MySQL](screenshots/mysql.png)
 
 # ✅ Completed Functionalities
 
