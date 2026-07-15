@@ -1,98 +1,94 @@
-# AI CRM – HCP Module
+# 🩺 AI CRM - HCP Module
 
-An AI-powered Customer Relationship Management (CRM) application for Medical Representatives to log healthcare professional (HCP) interactions, manage follow-ups, and gain AI-assisted insights using LangGraph and LLMs.
+An AI-powered Healthcare Professional (HCP) CRM that enables Medical Representatives to record, manage, and analyze doctor interactions using **LangGraph**, **LLMs**, **FastAPI**, **React**, and **MySQL**.
 
 ---
 
-## Features
+## 🚀 Features
 
-- AI-assisted interaction logging
-- Structured HCP interaction form
-- AI Chat Assistant
-- Search doctor interactions
-- Generate interaction summaries
-- Product insights
-- Pending follow-up management
-- Edit interaction details
-- Dashboard analytics
+### 📋 Structured Interaction Logging
+- Add HCP interactions
+- Edit existing interactions
+- Store follow-up dates
+- Search interactions
 - Responsive Material UI interface
 
+### 🤖 AI Assistant (LangGraph + LLM)
+Supports natural language commands such as:
+
+- Log an interaction
+- Find a doctor
+- Summarize doctor interactions
+- Show product insights
+- Show pending follow-ups
+
+### 📊 Dashboard
+- Total Doctors
+- Total Interactions
+- Upcoming Follow-ups
+- Most Discussed Product
+
+### 🛠 Backend
+- FastAPI REST APIs
+- Swagger API Documentation
+- MySQL Database
+- SQLAlchemy ORM
+- Pydantic Validation
+
 ---
 
-## Tech Stack
+# 🏗 Tech Stack
 
-### Frontend
-- React
-- Redux Toolkit
+## Frontend
+- React.js
 - Material UI
+- Redux Toolkit
 - Axios
 
-### Backend
+## Backend
 - FastAPI
 - SQLAlchemy
 - LangGraph
-- OpenAI-compatible LLM
+- Groq LLM
+- Pydantic
 
-### Database
+## Database
 - MySQL
 
 ---
 
-## Architecture
+# 📂 Project Structure
 
-React
-↓
-
-FastAPI REST API
-↓
-
-LangGraph Agent
-↓
-
-AI Tools
-• Search Tool
-• Summary Tool
-• Follow-up Tool
-• Product Insight Tool
-• Edit Tool
-
-↓
-
-MySQL
-
----
-
-## AI Capabilities
-
-The AI Assistant can:
-
-- Find doctor interactions
-- Summarize doctor history
-- Show pending follow-ups
-- Recommend products
-- Update follow-up dates
+```
+AI-CRM-HCP/
+│
+├── backend/
+│   ├── routers/
+│   ├── database/
+│   ├── models/
+│   ├── schemas/
+│   ├── services/
+│   ├── graph/
+│   ├── main.py
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── redux/
+│   │   ├── services/
+│   │   └── App.jsx
+│   └── package.json
+│
+└── README.md
+```
 
 ---
 
-## Screenshots
+# ⚙ Installation
 
-(Add 4–5 screenshots)
-
-Dashboard
-
-Structured Form
-
-AI Assistant
-
-Saved Interactions
-
-Swagger UI
-
----
-
-## Installation
-
-### Backend
+## Backend
 
 ```bash
 cd backend
@@ -103,10 +99,18 @@ venv\Scripts\activate
 
 pip install -r requirements.txt
 
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 
-### Frontend
+Backend runs on
+
+```
+http://localhost:8000
+```
+
+---
+
+## Frontend
 
 ```bash
 cd frontend
@@ -116,46 +120,195 @@ npm install
 npm run dev
 ```
 
----
+Frontend runs on
 
-## API Endpoints
-
-GET /interaction/
-
-POST /interaction/
-
-PUT /interaction/{id}
-
-POST /chat/
+```
+http://localhost:5173
+```
 
 ---
 
-## Folder Structure
+# 🗄 MySQL Configuration
 
-frontend/
+Create a database:
 
-backend/
+```sql
+CREATE DATABASE ai_crm;
+```
 
-README.md
+Configure your database URL in:
 
----
+```
+database.py
+```
 
-## Future Improvements
+Example:
 
-Authentication
+```python
+DATABASE_URL = "mysql+pymysql://root:password@localhost/ai_crm"
+```
 
-Doctor Profiles
-
-Role-based Access
-
-Analytics Dashboard
-
-Email Follow-up Reminders
-
-Deployment (Docker + Cloud)
+Run the backend to automatically create tables.
 
 ---
 
-## Author
+# 📡 API Endpoints
 
-Chaganti Naga Veera Satya Teja
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | /interaction | Get all interactions |
+| POST | /interaction | Create interaction |
+| PUT | /interaction/{id} | Update interaction |
+| POST | /chat | AI Assistant |
+
+---
+
+# 🤖 AI Commands
+
+The AI Assistant supports:
+
+### Log Interaction
+
+```
+I met Dr. Arjun Rao today.
+We discussed CardioPlus.
+Follow up on 2026-07-28.
+```
+
+---
+
+### Find Doctor
+
+```
+Find Dr Sharma
+```
+
+---
+
+### Summarize Interactions
+
+```
+Summarize Dr Sharma interactions
+```
+
+---
+
+### Product Insights
+
+```
+Show product insights
+```
+
+---
+
+### Pending Follow-ups
+
+```
+Show pending follow-ups
+```
+
+---
+
+# 📸 Screenshots
+
+## Dashboard
+
+![Dashboard](dashboard%20ai(1).png)
+
+---
+
+## Structured Form
+
+![Form](logtool(1).png)
+
+---
+
+## AI Log Interaction
+
+![AI Log](logtool(1).png)
+
+---
+
+## Find Doctor
+
+![Search](searchtool(1).png)
+
+---
+
+## AI Summary
+
+![Summary](summarytool(1).png)
+
+---
+
+## Product Insights
+
+![Product](productinsights%20tool(1).png)
+
+---
+
+## Pending Follow-ups
+
+![Follow-up](followuptool(1).png)
+
+---
+
+## Swagger API
+
+![Swagger](swagger.png)
+
+---
+
+## MySQL Database
+
+![MySQL](mysql%20.png)
+
+---
+
+# ✅ Completed Functionalities
+
+- ✔ Structured HCP Interaction Form
+- ✔ Edit Interaction
+- ✔ Search Interaction
+- ✔ AI Chat Interface
+- ✔ LangGraph Workflow
+- ✔ Groq LLM Integration
+- ✔ Doctor Search
+- ✔ Interaction Summary
+- ✔ Product Insights
+- ✔ Pending Follow-ups
+- ✔ Dashboard Analytics
+- ✔ FastAPI REST APIs
+- ✔ Swagger Documentation
+- ✔ MySQL Database
+- ✔ Responsive UI
+
+---
+
+# Future Improvements
+
+- Authentication (JWT)
+- Role-based Access
+- Doctor Profile Management
+- Export Reports (PDF/Excel)
+- Email Follow-up Reminders
+- Charts & Analytics
+- Voice Interaction
+
+---
+
+# 👨‍💻 Author
+
+**Chaganti Naga Veera Satya Teja**
+
+B.Tech Computer Science Engineering
+
+AI | Full Stack Developer
+
+GitHub:
+https://github.com/Tejachaganti/AI-CRM-HCP
+
+LinkedIn:
+https://www.linkedin.com/in/tejachaganti
+
+---
