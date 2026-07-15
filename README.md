@@ -225,31 +225,31 @@ Show pending follow-ups
 
 ## AI Log Interaction
 
-![AI Log](logtool(1).png)
+![AI Log](logtool.png)
 
 ---
 
 ## Find Doctor
 
-![Search](searchtool(1).png)
+![Search](searchtool.png)
 
 ---
 
 ## AI Summary
 
-![Summary](summarytool(1).png)
+![Summary](summarytool.png)
 
 ---
 
 ## Product Insights
 
-![Product](productinsights%20tool(1).png)
+![Product](productinsights tool.png)
 
 ---
 
 ## Pending Follow-ups
 
-![Follow-up](followuptool(1).png)
+![Follow-up](followuptool.png)
 
 ---
 
@@ -261,7 +261,7 @@ Show pending follow-ups
 
 ## MySQL Database
 
-![MySQL](mysql%20.png)
+![MySQL](mysql.png)
 
 ---
 
