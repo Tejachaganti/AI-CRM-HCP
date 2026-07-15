@@ -213,7 +213,9 @@ Show pending follow-ups
 
 ## Dashboard
 
-![Dashboard](dashboard ai.png)
+![Dashboard](dashboardai.png)
+
+---
 
 ---
 
