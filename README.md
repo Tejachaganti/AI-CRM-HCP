@@ -209,7 +209,7 @@ Show pending follow-ups
 
 ---
 
-# 📸 Screenshots
+# 📸 screenshots
 
 ## Dashboard
 ![Dashboard](screenshots/dashboard.png)
