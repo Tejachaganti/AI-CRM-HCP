@@ -13,45 +13,56 @@ class AgentState(TypedDict):
     user_input: str
     tool: str
     response: str
-
 def router(state: AgentState):
 
     text = state["user_input"].lower()
 
-    # Summary first
-    if "summary" in text or "summarize" in text:
+    # Summary
+    if any(word in text for word in ["summary", "summarize"]):
         return {"tool": "summary"}
 
     # Search
-    elif "search" in text or "find" in text:
+    elif any(word in text for word in ["search", "find"]):
         return {"tool": "search"}
 
     # Edit
-    elif "edit" in text or "change" in text:
+    elif any(word in text for word in ["edit", "update", "change"]):
         return {"tool": "edit"}
 
-    # Product
-    elif (
-        "product" in text
-        or "medicine" in text
-        or "drug" in text
-        or "cardioplus" in text
-    ):
-        return {"tool": "product"}
+    # Log Interaction (BEFORE Follow-up)
+    elif any(word in text for word in [
+        "met",
+        "visited",
+        "visit",
+        "called",
+        "call",
+        "meeting",
+        "today",
+        "discussed",
+        "spoke",
+        "doctor",
+        "interaction"
+    ]):
+        return {"tool": "log"}
 
     # Follow-up
-    elif "follow" in text:
+    elif any(word in text for word in [
+        "pending follow",
+        "show follow",
+        "follow-ups",
+        "followups",
+        "upcoming follow"
+    ]):
         return {"tool": "followup"}
 
-    # Log interaction LAST
-    elif (
-        "met" in text
-        or "visited" in text
-        or "discussed" in text
-        or "interaction" in text
-        or "doctor" in text
-    ):
-        return {"tool": "log"}
+    # Product
+    elif any(word in text for word in [
+        "product insight",
+        "product insights",
+        "top product",
+        "most discussed"
+    ]):
+        return {"tool": "product"}
 
     else:
         return {"tool": "log"}

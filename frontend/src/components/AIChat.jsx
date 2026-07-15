@@ -17,7 +17,7 @@ import {
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import SendIcon from "@mui/icons-material/Send";
 
-export default function AIChat() {
+export default function AIChat({ refreshInteractions }) {
   const [message, setMessage] = useState("");
   const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
@@ -30,23 +30,29 @@ export default function AIChat() {
   ];
 
   const sendMessage = async () => {
-    if (!message.trim()) return;
+  if (!message.trim()) return;
 
-    setLoading(true);
+  setLoading(true);
 
-    try {
-      const res = await api.post("/chat/", {
-        message,
-      });
+  try {
+    const res = await api.post("/chat/", {
+      message,
+    });
 
-      setResponse(res.data.response);
-    } catch (err) {
-      console.error(err);
-      setResponse("Unable to contact AI assistant.");
+    setResponse(res.data.response);
+
+    // Refresh interaction table after AI response
+    if (refreshInteractions) {
+      await refreshInteractions();
     }
 
+  } catch (err) {
+    console.error(err);
+    setResponse("Unable to contact AI assistant.");
+  } finally {
     setLoading(false);
-  };
+  }
+};
 
   return (
     <Card

@@ -216,8 +216,8 @@ Manage healthcare professional interactions with AI assistance.
         )}
 
         {tab === 1 && (
-          <AIChat />
-        )}
+  <AIChat refreshInteractions={loadInteractions} />
+)}
       </Paper>
 
     </Container>
