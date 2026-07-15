@@ -239,7 +239,7 @@ Show pending follow-ups
 
 ## Product Insights
 
-![Product](productinsights tool.png)
+![Product](productinsightstool.png)
 
 ---
 
