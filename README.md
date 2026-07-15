@@ -213,13 +213,7 @@ Show pending follow-ups
 
 ## Dashboard
 
-![Dashboard](dashboard%20ai(1).png)
-
----
-
-## Structured Form
-
-![Form](logtool(1).png)
+![Dashboard](dashboard ai.png)
 
 ---
 
